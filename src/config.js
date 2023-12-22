@@ -5,7 +5,7 @@ const sequelizeConfig = {
   host: process.env.DB_HOST || 'localhost',
   username: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '12345',
-  database: process.env.DB_NAME || 'time_tracking_system_db',
+  database: process.env.DB_NAME || 'file_upload_db',
   port: process.env.PORT ? parseInt(process.env.PORT, 10) : 3306,
 };
 
