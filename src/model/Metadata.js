@@ -8,12 +8,25 @@ const Metadata = sequelize.define('Metadata', {
     autoIncrement: true,
     allowNull: false,
   },
-  filename: {
+  fileType: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  metadata: {
+  fileName: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  textContent: {
     type: DataTypes.TEXT,
+  },
+  dimensions: {
+    type: DataTypes.STRING,
+  },
+  author: {
+    type: DataTypes.STRING,
+  },
+  createdDate: {
+    type: DataTypes.DATE,
   },
 });
 

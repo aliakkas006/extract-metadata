@@ -1,4 +1,3 @@
-import Metadata from '../model/Metadata.js';
 import extractMetadata from '../utils/extractMetadata.js';
 
 const metadataController = async (req, res) => {
@@ -7,14 +6,9 @@ const metadataController = async (req, res) => {
   }
 
   const filePath = req.file.path;
-  const filename = req.file.filename;
 
   try {
     const metadata = await extractMetadata(filePath);
-    await Metadata.create({
-      filename,
-      metadata: JSON.stringify(metadata),
-    });
 
     const response = {
       code: 201,

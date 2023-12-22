@@ -4,6 +4,6 @@ import metadataController from '../controller/metadata.controller.js';
 
 const router = Router();
 
-router.post('/metadata', upload.single('file'), metadataController);
+router.post('/', upload.single('file'), metadataController);
 
 export default router;

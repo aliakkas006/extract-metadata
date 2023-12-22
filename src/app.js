@@ -1,12 +1,12 @@
 import express from 'express';
 import cors from 'cors';
-import router from './route/metadata.route.js';
+import metadataRoute from './route/metadata.route.js';
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use('/api/v1', router);
+app.use('/metadata', metadataRoute);
 
 app.get('/health', (_req, res) => {
   res.send('Everythin is Okay!');
